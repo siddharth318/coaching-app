@@ -1,0 +1,36 @@
+.web-parent-container {
+    width: 100vw;
+    /* Full width of the viewport */
+    height: 100vh;
+    /* Full height of the viewport */
+    margin: 0;
+    /* Remove any default margin */
+    padding: 0;
+    /* Remove any default padding */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width/height */
+    background-color: black;
+}
+
+
+.logo {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    color: #f5f5dc; /* light cream */
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    color: yellow;
+  }
+  
+  
