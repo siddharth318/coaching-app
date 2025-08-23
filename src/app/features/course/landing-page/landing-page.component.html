@@ -1,4 +1,44 @@
 <div class="web-parent-container">
+    <div class="top-bar">
+        <div class="logo-circle">
+            <span class="logo-text">U;</span>
+        </div>
+        <button class="enquiry-btn">Enquiry</button>
+    </div>
 
-    <div class="logo">U; something</div>
+    <div class="welcome-part">
+        <h1 class="hero-heading">WELCOME, FRIEND</h1>
+        <div class="hero-subheading">Stuck in tutorial h*ck?</div>
+        <p class="hero-text">
+          You've come to the right place. We make learning the <br/> JavaScript ecosystem fun, approachable, and easy…
+        </p>
+        <button class="hero-btn">SHUT UP & TAKE MY MONEY</button>
+    </div>
+<!-- testimonial-card.component.html -->
+<div class="card-stack">
+    <div
+      class="testimonial-card"
+      *ngFor="let card of cards; let i=index"
+      [style.zIndex]="cards.length - i"
+      [style.transform]="'translateX(' + (i * 32) + 'px)'"
+      [style.background]="card.color"
+    >
+      <div class="card-image">
+        <img [src]="card.image" alt="Testimonial photo" />
+      </div>
+      <div class="card-info">
+        <span class="card-name">{{ card.name }}</span><br>
+        <span class="card-course">{{ card.course }}</span>
+        <div class="card-rating">
+          <ng-container *ngFor="let star of getStars(card.rating)">
+            ★
+          </ng-container>
+        </div>
+      </div>
+      <div class="card-text">{{ card.text }}</div>
+    </div>
+  </div>
+  <button class="shuffle-btn" (click)="shuffleCards()">Shuffle</button>
+  
+
 </div>
