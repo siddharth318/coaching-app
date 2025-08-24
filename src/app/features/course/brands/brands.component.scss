@@ -1,20 +1,12 @@
 
-
-    .logo-strip {
+    .logos {
       display: flex;
-      gap: 40px;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 38px 0 20px 0;
     }
+   .brandImage {
+    width: 60%;
+   }
 
-    .logo-strip svg {
-      width: 50px;
-      height: 50px;
-      fill: #F5F5DC; /* Beige color */
-      transition: transform 0.3s ease;
-    }
-
-    .logo-strip svg:hover {
-      transform: scale(1.1);
-      fill: #CDBE70; /* Optional hover beige variant */
-    }
