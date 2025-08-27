@@ -113,96 +113,188 @@
 
 .welcome-part
 {
-  margin-top: 200px;
+  margin-top: 120px;
   margin-left: 45px;
 }
-
-.card-stack {
+.testimonial-stack {
   position: relative;
-  width: 370px;
-  height: 520px;
+  width: 500px;
+  height: 500px;
+  margin-top: 90px;
+  margin-right: 50px;
+  /* margin-right: 0; Only needed if you're aligning further right.*/
 }
 
 .testimonial-card {
   position: absolute;
   top: 0;
   left: 0;
-  width: 324px;
+  width: 400px;
   height: 500px;
   border-radius: 24px;
-  box-shadow: 4px 6px 0 #181616;
-  padding: 24px;
+  box-shadow: 8px 10px 0 #181616;
+  padding: 20px 20px 0 20px;     /* Tighter padding at the bottom */
+  padding-top: 50px;
   font-family: 'Montserrat', Arial, sans-serif;
   color: #181616;
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.3s;
+  overflow: visible;
+  border: 4px solid #181616;
+  background: #fff; /* Overwritten inline by card.color */
+}
+
+/* Stacked transform (for Angular/ngFor inline style, not default CSS) */
+/* Example: [style.transform]="'translateX(' + (i * 40) + 'px) rotate(-7deg)'" */
+
+.portrait-bg {
+  position: absolute;
+  width: 100%;
+  height: 190px;
+  border-radius: 60% 45% 50% 70%/60% 52% 48% 63%;
+  background: #fff;         /* White oval background */
+  left: -12px;              /* Moves it to overlap with the left edge */
+  top: 110px;               /* Overlaps with the middle section */
+  transform: rotate(-31deg) scale(1.07); /* A little rotation, organic shape */
+  z-index: 1;
+  box-shadow: 0 5px 0 #181616;
 }
 
 .card-image {
-  width: 180px;
-  height: 180px;
-  border-radius: 60% 45% 45% 60%;
-  background: #F9F4DC;
-  margin-bottom: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 0 #181616;
-  overflow: hidden;
+  position: absolute;
+  left: 25px;
+  top: 0px;
+  width: 82%;
+  height: 60%;
+  object-fit: cover;
+  z-index: 2; /* appears above the oval */
+  border-radius: 60% 45% 45% 60%; /* matches the oval */
+  border: none;
 }
 
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 .card-info {
   background: #F9F4DC;
-  padding: 12px 18px;
-  border-radius: 16px;
-  box-shadow: 2px 3px 0 #181616;
+  border-radius: 14px;
+  box-shadow: 4px 5px 0 #181616;
   font-size: 1em;
-  margin: -55px 0 14px 18px;
-  width: max-content;
+  padding: 12px 24px;
+  width: 170px;
+  margin-top: 210px;
+  margin-left: 130px;
+  position: relative;
+  z-index: 2;
+  border: 2px solid #181616;
 }
 
 .card-name {
   font-weight: bold;
+  font-size: 1.1em;
+  color: #181616;
+  letter-spacing: 0.4px;
 }
 
 .card-course {
-  font-size: 0.95em;
-  color: #555;
+  display: inline-block;
+  font-size: 0.9em;
+  color: #333;
+  margin-top: 3px;
 }
 
 .card-rating {
   color: #FFA600;
-  font-size: 16px;
-  letter-spacing: 2px;
-  margin-top: 8px;
+  font-size: 1.1em;
+  letter-spacing: 2.5px;
+  margin-top: 7px;
 }
 
 .card-text {
-  margin-top: 80px;
+  margin-top: 45px;
   color: #181616;
-  font-size: 1.2em;
+  font-size: 1em;
+  padding: 0 7px;
+  text-align: left;
+  font-family: inherit;
+  z-index: 3;
+  position: relative;
 }
 
+/* Shuffle Button (unchanged, but here for completeness) */
 .shuffle-btn {
-  margin-top: 540px;
+  margin: 540px auto 0 98px;
   background: #FFC300;
   color: #181616;
-  border-radius: 24px;
-  padding: 12px 32px;
+  border-radius: 22px;
+  padding: 12px 28px;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: 1em;
   box-shadow: 2px 2px 0 #181616;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
   transition: background 0.2s;
+  display: block;
 }
 .shuffle-btn:hover {
   background: #FFD53B;
+}
+
+
+
+.top-segment
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px 20px 20px
+}
+
+
+.dev-brain-container {
+  background: #161313;
+  color: #faf5df;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 70px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.brain {
+
+}
+
+.brain-text {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 60px 60px 0 0;
+  background: #FCDED1;
+  color: #c63135;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Arial Black', Impact, Arial, sans-serif;
+  text-shadow: 2px 2px 0 #faf5df;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 58px;
+  margin: 20px 0 10px 0;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 1.5px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #faf5df;
+  font-weight: 400;
+}
+
+.sub-subtitle {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #b9b2a2;
+  font-weight: 300;
 }

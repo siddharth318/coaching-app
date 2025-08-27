@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -16,9 +17,9 @@ cards = [
     name: 'Faraz Ahmad',
     course: 'Advanced JavaScript',
     rating: 5,
-    text: 'I was a scrub before I discovered ui.dev. I used their Advanced JavaScript course to prepare for interviews and landed a job at Netflix. All their courses are bangers.',
+    text: ' "I was a scrub before I discovered ui.dev. I used their Advanced JavaScript course to prepare for interviews and landed a job at Netflix. All their courses are bangers." ',
     color: '#ED8FAA', // pink
-    image: 'assets/pic1.jpg' // replace with photo path
+    image: 'assets/faraz.svg' // replace with photo path
   },
   {
     name: 'Name2',
